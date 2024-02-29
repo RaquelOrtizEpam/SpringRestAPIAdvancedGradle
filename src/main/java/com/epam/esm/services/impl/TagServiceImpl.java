@@ -9,9 +9,6 @@ import com.epam.esm.services.TagService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import static com.epam.esm.controllers.advice.entity.ErrorsCodes.TAG_NOT_FOUND_BY_ID;
-import static com.epam.esm.controllers.advice.entity.ErrorsCodes.TAG_NOT_FOUND_BY_NAME;
-
 @Service
 @AllArgsConstructor
 public class TagServiceImpl implements TagService {
@@ -29,7 +26,6 @@ public class TagServiceImpl implements TagService {
     public TagDto getById(Long id) {
         Tag tag = tagRepository.findById(id)
                 .orElseThrow(() -> new TagNotFoundException(String.format(
-                                TAG_NOT_FOUND_BY_ID.getMessage(),
                                 id.toString()
                         ))
                 );
@@ -41,7 +37,6 @@ public class TagServiceImpl implements TagService {
     public TagDto getByTagName(String tagName) {
         Tag tag = tagRepository.findByName(tagName)
                 .orElseThrow(() -> new TagNotFoundException(String.format(
-                                TAG_NOT_FOUND_BY_NAME.getMessage(),
                                 tagName
                         ))
                 );
@@ -51,12 +46,11 @@ public class TagServiceImpl implements TagService {
 
     @Override
     public void delete(TagDto tagDto) {
-        Tag tag = tagRepository.findById(tagDto.getId())
-                .orElseThrow(() -> new TagNotFoundException(String.format(
-                        TAG_NOT_FOUND_BY_ID.getMessage(),
-                        tagDto.getId()
-                )));
+        Tag tag = tagRepository.findById(tagDto.getId()).orElse(null);
 
-        tagRepository.delete(tag);
+        if (tag != null) {
+            tagRepository.delete(tag);
+        }
     }
+
 }

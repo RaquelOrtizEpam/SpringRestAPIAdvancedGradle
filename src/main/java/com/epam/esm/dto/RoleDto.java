@@ -9,8 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 @Builder
-public class UserDto {
+public class RoleDto {
     private Long id;
     private String name;
-    private String email;
 }

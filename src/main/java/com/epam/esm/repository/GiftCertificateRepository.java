@@ -104,6 +104,7 @@ public class GiftCertificateRepository implements CrudRepository<GiftCertificate
         return entity;
     }
 
+
     @Override
     public Optional<GiftCertificate> findById(Long id) {
         return jdbcTemplate.query(SELECT_BY_ID, this::mapRowToGiftCertificate, id).stream().findFirst();

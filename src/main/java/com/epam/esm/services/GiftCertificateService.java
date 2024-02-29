@@ -19,4 +19,7 @@ public interface GiftCertificateService {
     GiftCertificateDto update(GiftCertificateDto giftCertificate);
 
     void delete(GiftCertificateDto giftCertificate);
+
+    GiftCertificateDto updateField(Long id, String fieldName, Object value);
+
 }

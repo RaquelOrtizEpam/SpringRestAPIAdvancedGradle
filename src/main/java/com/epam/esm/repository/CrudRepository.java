@@ -2,7 +2,7 @@ package com.epam.esm.repository;
 
 import java.util.Optional;
 
-public interface CrudRepository<T> {
+public interface CrudRepository<T>  {
     T create(T entity);
 
     T update(T entity);

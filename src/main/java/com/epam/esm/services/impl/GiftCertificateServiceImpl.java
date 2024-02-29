@@ -13,10 +13,10 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.lang.reflect.Field;
 import java.util.List;
+import java.util.Optional;
 
-import static com.epam.esm.controllers.advice.entity.ErrorsCodes.GIFT_CERTIFICATE_NOT_FOUND;
-import static com.epam.esm.controllers.advice.entity.ErrorsCodes.TAG_NOT_FOUND_BY_NAME;
 
 @Service
 @AllArgsConstructor
@@ -47,7 +47,6 @@ public class GiftCertificateServiceImpl implements GiftCertificateService {
         GiftCertificate giftCertificate = giftCertificateRepository.findById(id)
                 .orElseThrow(() -> new GiftCertificationNotFoundException(
                         String.format(
-                                GIFT_CERTIFICATE_NOT_FOUND.getMessage(),
                                 id.toString()
                         )
                 ));
@@ -76,7 +75,6 @@ public class GiftCertificateServiceImpl implements GiftCertificateService {
         Tag tag = tagRepository.findByName(tagName)
                 .orElseThrow(() -> new TagNotFoundException(
                         String.format(
-                                TAG_NOT_FOUND_BY_NAME.getMessage(),
                                 tagName
                         )
                 ));
@@ -104,7 +102,6 @@ public class GiftCertificateServiceImpl implements GiftCertificateService {
         GiftCertificate existingGiftCertificate = giftCertificateRepository.findById(giftCertificateDto.getId())
                 .orElseThrow(() -> new GiftCertificationNotFoundException(
                         String.format(
-                                GIFT_CERTIFICATE_NOT_FOUND.getMessage(),
                                 giftCertificateDto.getId().toString()
                         )
                 ));
@@ -133,13 +130,11 @@ public class GiftCertificateServiceImpl implements GiftCertificateService {
         return giftCertificateMapper.toDto(existingGiftCertificate);
     }
 
-    @Override
     @Transactional
     public void delete(GiftCertificateDto giftCertificateDto) {
         GiftCertificate giftCertificate = giftCertificateRepository.findById(giftCertificateDto.getId())
                 .orElseThrow(() -> new GiftCertificationNotFoundException(
                         String.format(
-                                GIFT_CERTIFICATE_NOT_FOUND.getMessage(),
                                 giftCertificateDto.getId().toString()
                         )
                 ));
@@ -148,4 +143,30 @@ public class GiftCertificateServiceImpl implements GiftCertificateService {
         giftCertificateRepository.disassociateTags(giftCertificateDto.getId(), tagsToRemove);
         giftCertificateRepository.delete(giftCertificate);
     }
+
+    @Override
+    @Transactional
+    public GiftCertificateDto updateField(Long id, String fieldName, Object value) {
+        Optional<GiftCertificate> optionalGiftCertificate = giftCertificateRepository.findById(id);
+
+        if (optionalGiftCertificate.isPresent()) {
+            GiftCertificate existingGiftCertificate = optionalGiftCertificate.get();
+
+            try {
+                Field field = GiftCertificate.class.getDeclaredField(fieldName);
+                field.setAccessible(true);
+                field.set(existingGiftCertificate, value);
+            } catch (NoSuchFieldException | IllegalAccessException e) {
+                throw new RuntimeException("Failed to update field: " + fieldName, e);
+            }
+
+            giftCertificateRepository.update(existingGiftCertificate);
+
+            return giftCertificateMapper.toDto(existingGiftCertificate);
+        } else {
+            // Handle the case where the gift certificate is not found (return null, throw exception, etc.)
+            return null;
+        }
+    }
+
 }

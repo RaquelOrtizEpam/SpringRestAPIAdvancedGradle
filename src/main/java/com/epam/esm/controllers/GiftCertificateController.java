@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@AllArgsConstructor
 @RequestMapping("/gift-certificates")
+@AllArgsConstructor
 public class GiftCertificateController {
     private final GiftCertificateService giftCertificateService;
 
@@ -41,17 +41,17 @@ public class GiftCertificateController {
         return giftCertificateService.getAllByTagName(tagName);
     }
 
-    @PostMapping()
+    @PostMapping
     public GiftCertificateDto create(@RequestBody GiftCertificateDto giftCertificateDto) {
         return giftCertificateService.create(giftCertificateDto);
     }
 
-    @PutMapping()
+    @PutMapping
     public GiftCertificateDto update(@RequestBody GiftCertificateDto giftCertificateDto) {
         return giftCertificateService.update(giftCertificateDto);
     }
 
-    @DeleteMapping()
+    @DeleteMapping("/{id}")
     public void delete(@RequestBody GiftCertificateDto giftCertificateDto) {
         giftCertificateService.delete(giftCertificateDto);
     }
