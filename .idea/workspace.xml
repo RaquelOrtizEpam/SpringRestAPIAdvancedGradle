@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa59ee05-af80-4663-8f85-1104cb3b4450" name="Changes" comment="">
+    <list default="true" id="fa59ee05-af80-4663-8f85-1104cb3b4450" name="Changes" comment="no bat">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +76,26 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "RaquelOrtizEpam"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="8721463e-950f-4594-8dc2-793e60557cb3" />
+        <option name="url" value="https://github.com/RaquelOrtizEpam/SpringRestAPIAdvancedGradle" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -96,7 +116,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "jenkins",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/raque/IdeaProjects/SpringRestAPIAdvancedGradle/src/main/java/com/epam/esm/mapper",
     "project.structure.last.edited": "Modules",
@@ -123,7 +143,7 @@
       <recent name="com.epam.esm.services.impl" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.SpringRestAPIAdvancedGradle [build]">
+  <component name="RunManager" selected="Gradle.SpringRestAPIAdvancedGradle [jar]">
     <configuration name="GiftCertificateApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.epam.esm.GiftCertificateApplication" />
       <module name="SpringRestAPIAdvancedGradle.main" />
@@ -194,8 +214,31 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="SpringRestAPIAdvancedGradle [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.SpringRestAPIAdvancedGradle [jar]" />
         <item itemvalue="Gradle.SpringRestAPIAdvancedGradle [build]" />
         <item itemvalue="Gradle.SpringRestAPIAdvancedGradle [clean]" />
         <item itemvalue="Application.SecuringWebApplication" />
@@ -219,6 +262,15 @@
       <option name="presentableId" value="Default" />
       <updated>1703028833970</updated>
     </task>
+    <task id="LOCAL-00001" summary="no bat">
+      <option name="closed" value="true" />
+      <created>1710955614817</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1710955614817</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -243,5 +295,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="no bat" />
+    <option name="LAST_COMMIT_MESSAGE" value="no bat" />
   </component>
 </project>
