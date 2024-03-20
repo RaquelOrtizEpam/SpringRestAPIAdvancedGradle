@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa59ee05-af80-4663-8f85-1104cb3b4450" name="Changes" comment="no bat">
+    <list default="true" id="fa59ee05-af80-4663-8f85-1104cb3b4450" name="Changes" comment="bat">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +48,12 @@
                 <item name="SpringRestAPIAdvancedGradle" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SpringRestAPIAdvancedGradle" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build setup" type="c8890929:TasksNode$1" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
@@ -113,6 +120,8 @@
   "keyToString": {
     "Gradle.SpringRestAPIAdvancedGradle [:GiftCertificateApplication.main()].executor": "Run",
     "Gradle.SpringRestAPIAdvancedGradle [build].executor": "Run",
+    "Gradle.SpringRestAPIAdvancedGradle [jar].executor": "Run",
+    "Gradle.SpringRestAPIAdvancedGradle [wrapper].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -143,20 +152,7 @@
       <recent name="com.epam.esm.services.impl" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.SpringRestAPIAdvancedGradle [jar]">
-    <configuration name="GiftCertificateApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.epam.esm.GiftCertificateApplication" />
-      <module name="SpringRestAPIAdvancedGradle.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.epam.esm.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Gradle.SpringRestAPIAdvancedGradle [wrapper]">
     <configuration name="SecuringWebApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.epam.esm.securingweb.SecuringWebApplication" />
       <module name="SpringRestAPIAdvancedGradle.main" />
@@ -236,13 +232,35 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="SpringRestAPIAdvancedGradle [wrapper]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="wrapper" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.SpringRestAPIAdvancedGradle [wrapper]" />
         <item itemvalue="Gradle.SpringRestAPIAdvancedGradle [jar]" />
         <item itemvalue="Gradle.SpringRestAPIAdvancedGradle [build]" />
         <item itemvalue="Gradle.SpringRestAPIAdvancedGradle [clean]" />
         <item itemvalue="Application.SecuringWebApplication" />
-        <item itemvalue="Application.GiftCertificateApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -270,7 +288,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710955614817</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="bat">
+      <option name="closed" value="true" />
+      <created>1710956760824</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1710956760824</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -298,6 +324,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="no bat" />
-    <option name="LAST_COMMIT_MESSAGE" value="no bat" />
+    <MESSAGE value="bat" />
+    <option name="LAST_COMMIT_MESSAGE" value="bat" />
   </component>
 </project>
